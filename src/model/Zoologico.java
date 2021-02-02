@@ -18,6 +18,42 @@ public class Zoologico {
 		
 	}
 	
+	public String verificarJaula() { //Informar si existen jaulas ocupadas con la misma cantidad de animales
+		
+		String mensaje= "";
+		
+		for(int i= 0; i<jaulas.length;i++) {
+			
+			if(jaulas[i] != null) {
+				
+				mensaje = "la jaula "+(i+1)+" esta ocupada";
+				
+				if(jaulas[i].darCapacidadJaula() == jaulas[i].darAnimales().size()) {
+					
+					mensaje += "y tienen la misma cantidad de animales";
+					
+				} else {
+					
+					mensaje += "pero no tienen la misma cantidad de animales";
+					
+				}
+				
+					
+			}else {
+				
+				mensaje = "las "+(i+1)+ " jaulas estan desocupadas";
+				
+			}
+			
+			
+		}
+		
+		return mensaje;
+		
+		
+		
+	}
+	
 	
 	
 }
